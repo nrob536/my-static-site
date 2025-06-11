@@ -32,3 +32,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           publish_branch: nr-dev  # <--- deploys to nr-dev, not gh-pages
+          force_orphan: true      # Ensures only static files remain in nr-dev (removes old files)
+          #clean: true           # (the default) removes old files before deploying new ones
